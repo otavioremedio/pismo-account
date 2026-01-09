@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service
 
 @Service
 class OperationService(private val operationTypeRepository: OperationTypeRepository) {
+
     fun findById(id: Long): OperationType = operationTypeRepository.findById(id)
         .orElseThrow { EntityNotFoundException("Operation Type $id is invalid") }
+
 }

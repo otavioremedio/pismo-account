@@ -9,5 +9,4 @@ class TransactionService(private val transactionRepository: TransactionRepositor
 
     fun save(transaction: Transaction): Transaction = transactionRepository.save(transaction)
 
-    fun findAll(): List<Transaction> = transactionRepository.findAll()
 }

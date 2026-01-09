@@ -8,8 +8,8 @@ import org.springframework.dao.DataIntegrityViolationException
 
 open class BaseFacade {
 
-    protected val logger: Logger = LoggerFactory.getLogger(this.javaClass)
-    protected val logMapper = MapperLogConfiguration.logMapper
+    private val logger: Logger = LoggerFactory.getLogger(this.javaClass)
+    private val logMapper = MapperLogConfiguration.logMapper
 
     protected fun <T> T.execAndLog(func: (T) -> T): T {
         val method = (func as CallableReference).name
