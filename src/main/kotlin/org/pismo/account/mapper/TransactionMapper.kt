@@ -30,7 +30,7 @@ object TransactionMapper {
             accountId = transaction.accountId,
             operationTypeId = transaction.operationTypeId.id,
             amount = when(type) {
-                TransactionTypeEnum.DEBIT -> transaction.amount.abs().negate()
+                TransactionTypeEnum.DEBIT -> transaction.amount.abs()
                 else -> transaction.amount.abs()
             }
         )

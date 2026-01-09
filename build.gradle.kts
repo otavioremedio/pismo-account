@@ -29,6 +29,9 @@ dependencies {
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+    testImplementation("io.rest-assured:rest-assured:5.3.0")
+    testImplementation("io.rest-assured:json-path:5.3.0")
+    testImplementation("org.hamcrest:hamcrest:2.2")
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {

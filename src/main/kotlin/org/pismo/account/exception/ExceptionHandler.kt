@@ -17,17 +17,17 @@ class ExceptionHandler {
             HttpStatus.CONFLICT,
             "Already have a account with that document."
         )
-        problemDetail.title = "Create conflict"
+        problemDetail.title = "create_conflict"
         return ResponseEntity.of(problemDetail).build()
     }
 
     @ExceptionHandler(EntityNotFoundException::class)
     fun handleEntityNotFoundException(ex: EntityNotFoundException): ResponseEntity<Any> {
         val problemDetail = forStatusAndDetail(
-            HttpStatus.NOT_FOUND,
+            HttpStatus.BAD_REQUEST,
             ex.message ?: ex.localizedMessage
         )
-        problemDetail.title = "Not Found"
+        problemDetail.title = "invalid_parameter"
         return ResponseEntity.of(problemDetail).build()
     }
 

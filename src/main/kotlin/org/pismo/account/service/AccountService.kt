@@ -11,8 +11,5 @@ class AccountService(private val accountRepository: AccountRepository) {
     fun findById(id: Long): Account = accountRepository.findById(id)
         .orElseThrow { EntityNotFoundException("Account $id not found") }
 
-    fun findByDocumentNumber(document: String): Account = accountRepository.findByDocumentNumber(document)
-        .orElseThrow { EntityNotFoundException("Account with document $document not found") }
-
     fun save(account: Account): Account = accountRepository.save(account)
 }
