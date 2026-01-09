@@ -7,7 +7,7 @@ data class AccountFindContext(
     val accountId: Long,
     override val account: Account? = null,
     override val accountResponse: AccountResponse? = null,
-): AccountContext<AccountFindContext>() {
+): SingleAccountContext<AccountFindContext> {
     override fun addAccount(account: Account) = copy(account = account)
     override fun addAccountResponse(accountResponse: AccountResponse) = copy(accountResponse = accountResponse)
 }

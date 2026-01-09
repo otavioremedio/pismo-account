@@ -8,7 +8,7 @@ data class AccountCreateContext(
     val request: AccountRequest,
     override val account: Account? = null,
     override val accountResponse: AccountResponse? = null,
-): AccountContext<AccountCreateContext>() {
+): SingleAccountContext<AccountCreateContext> {
     override fun addAccount(account: Account) = copy(account = account)
     override fun addAccountResponse(accountResponse: AccountResponse) = copy(accountResponse = accountResponse)
 }

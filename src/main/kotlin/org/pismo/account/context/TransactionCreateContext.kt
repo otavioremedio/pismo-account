@@ -8,13 +8,13 @@ import org.pismo.account.dto.TransactionResponse
 
 data class TransactionCreateContext(
     val request: TransactionRequest,
-    val account: Account? = null,
-    val operationType: OperationType? = null,
-    val transaction: Transaction? = null,
-    val transactionResponse: TransactionResponse? = null
-): TransactionContext<TransactionCreateContext>() {
-    fun addAccount(account: Account) = copy(account = account)
-    fun addOperationType(operationType: OperationType) = copy(operationType = operationType)
-    fun addTransaction(transaction: Transaction) = copy(transaction = transaction)
-    fun addTransactionResponse(transactionResponse: TransactionResponse) = copy(transactionResponse = transactionResponse)
+    override val account: Account? = null,
+    override val operationType: OperationType? = null,
+    override val transaction: Transaction? = null,
+    override val transactionResponse: TransactionResponse? = null
+): SingleTransactionContext<TransactionCreateContext> {
+    override fun addAccount(account: Account) = copy(account = account)
+    override fun addOperationType(operationType: OperationType) = copy(operationType = operationType)
+    override fun addTransaction(transaction: Transaction) = copy(transaction = transaction)
+    override fun addTransactionResponse(transactionResponse: TransactionResponse) = copy(transactionResponse = transactionResponse)
 }
