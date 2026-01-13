@@ -11,7 +11,7 @@ data class TransactionCreateContext(
     override val operationType: org.pismo.transaction.domain.OperationType? = null,
     override val transaction: Transaction? = null,
     override val transactionResponse: TransactionResponse? = null
-): SingleTransactionContext<org.pismo.transaction.context.TransactionCreateContext> {
+): SingleTransactionContext<TransactionCreateContext> {
     override fun addAccount(account: AccountResponse) = copy(account = account)
     override fun addOperationType(operationType: org.pismo.transaction.domain.OperationType) = copy(operationType = operationType)
     override fun addTransaction(transaction: Transaction) = copy(transaction = transaction)

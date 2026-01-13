@@ -14,6 +14,5 @@ class AccountLogConfiguration {
     fun setupLogs() {
         LogMapperRegistry.registerMixIn(Account::class.java, AccountLogMixin::class.java)
         LogMapperRegistry.registerMixIn(AccountRequest::class.java, AccountLogMixin::class.java)
-        LogMapperRegistry.registerMixIn(AccountResponse::class.java, AccountLogMixin::class.java)
     }
 }
