@@ -1,7 +1,6 @@
-package org.pismo.account.encode
+package org.pismo.commons.encode
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize
-import org.pismo.commons.encode.MaskedSerializer
 
 abstract class AccountLogMixin {
     @get:JsonSerialize(using = MaskedSerializer::class)
