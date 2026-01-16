@@ -5,8 +5,8 @@ import org.pismo.transaction.context.TransactionCreateContext
 import org.pismo.transaction.dto.TransactionRequest
 import org.pismo.transaction.dto.TransactionResponse
 import org.pismo.transaction.mapper.TransactionMapper
-import org.pismo.transaction.org.pismo.transaction.service.TransactionAccountService
 import org.pismo.transaction.service.OperationService
+import org.pismo.transaction.service.TransactionAccountService
 import org.pismo.transaction.service.TransactionService
 import org.springframework.stereotype.Service
 
@@ -19,8 +19,8 @@ class TransactionCreateFacade(
     fun createTransaction(request: TransactionRequest): TransactionResponse {
         return TransactionCreateContext(request)
             .execAndLog(::findAccount)
-            .execAndLog(::validateLimit)
             .execAndLog(::findOperationType)
+            .execAndLog(::validateLimit)
             .execAndLog(::createTransaction)
             .execAndLog(::updateAvailableLimit)
             .execAndLog(::saveTransaction)

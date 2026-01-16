@@ -1,4 +1,4 @@
-package org.pismo.transaction.org.pismo.transaction.service
+package org.pismo.transaction.service
 
 import org.pismo.commons.dto.AccountResponse
 import org.pismo.commons.dto.UpdateAccountRequest

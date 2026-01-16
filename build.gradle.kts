@@ -53,6 +53,7 @@ subprojects {
         "testImplementation"("io.rest-assured:rest-assured:5.3.0")
         "testImplementation"("io.rest-assured:json-path:5.3.0")
         "testImplementation"("org.hamcrest:hamcrest:2.2")
+        "testImplementation"("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
         "testImplementation"("org.springframework.cloud:spring-cloud-starter-contract-stub-runner")
         "testImplementation"(testFixtures(project(":commons")))
 
