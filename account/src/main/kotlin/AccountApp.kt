@@ -1,11 +1,11 @@
-package org.pismo
+package org.pismo.account
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication(scanBasePackages = ["org.pismo"])
-class PismoApp
+class AccountApp
 
 fun main(args: Array<String>) {
-    runApplication<PismoApp>(*args)
+    runApplication<AccountApp>(*args)
 }

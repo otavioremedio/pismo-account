@@ -1,0 +1,22 @@
+services:
+  account-service:
+    build:
+      context: .
+      dockerfile: account/Dockerfile
+    ports:
+      - "8082:8082"
+    networks:
+      - app-network
+
+  transaction-service:
+    build:
+      context: .
+      dockerfile: transaction/Dockerfile
+    ports:
+      - "8083:8083"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

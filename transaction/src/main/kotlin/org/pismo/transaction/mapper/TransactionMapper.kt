@@ -24,7 +24,7 @@ object TransactionMapper {
             transactionId = transaction.transactionId!!,
             accountId = transaction.accountId,
             operationTypeId = transaction.operationTypeId.id,
-            amount = transaction.amount.abs()
+            amount = transaction.amount.abs().setScale(2)
         )
 
 }

@@ -1,7 +1,7 @@
 package org.pismo.account.context
 
 import org.pismo.account.domain.Account
-import org.pismo.account.dto.AccountResponse
+import org.pismo.commons.dto.AccountResponse
 
 data class AccountFindContext(
     val accountId: Long,
